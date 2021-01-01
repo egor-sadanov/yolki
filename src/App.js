@@ -65,6 +65,10 @@ function App() {
           </div>
         </div>
         <div className="flexbox">
+          <div className="message">
+            <p>Please be aware that due to current covid restrictions in place, we are limited by the number of partons. That said, we encourage you to purchase tickets in advance.</p>
+            <p style={{marginBottom: 0}}>In the form below you can leave inquiry and we will send you card details for transfer.</p>
+          </div>
           <div className="form-container">
             <form onSubmit={e => handleSubmit(e)}>
               <input type="hidden" name="form-name" value="contact" />
@@ -81,7 +85,7 @@ function App() {
                   name="name" 
                   value={formData.name} 
                   onChange={handleChange} 
-                  placeholder="name"
+                  placeholder="enter your name"
                   required 
                 />
               </div>
@@ -92,7 +96,7 @@ function App() {
                   name="email" 
                   value={formData.email} 
                   onChange={handleChange} 
-                  placeholder="email"
+                  placeholder="enter your email"
                   required
                 />
               </div>
@@ -103,20 +107,26 @@ function App() {
                   name="phone" 
                   value={formData.phone} 
                   onChange={handleChange} 
-                  placeholder="phone"
+                  placeholder="enter your phone"
                 />
               </div>
               <div className="peeps">
-                <label htmlFor="adults">Adults</label><br />
-                <select name="adults" id="adults" onChange={handleChange}>
-                  {[...Array(11)].map((x, i) => <option key={i}>{i}</option>)}
-                </select>
-                <label htmlFor="kids">Kids</label><br />
-                <select name="kids" id="kids" onChange={handleChange}>
-                  {[...Array(11)].map((x, i) => <option key={i}>{i}</option>)}
-                </select>
+                <div>
+                  <label htmlFor="adults">Adults</label><br />
+                  <select name="adults" id="adults" onChange={handleChange}>
+                    {[...Array(11)].map((x, i) => <option key={i}>{i}</option>)}
+                  </select>
+                </div>
+                <div>
+                  <label htmlFor="kids">Kids</label><br />
+                  <select name="kids" id="kids" onChange={handleChange}>
+                    {[...Array(11)].map((x, i) => <option key={i}>{i}</option>)}
+                  </select>
+                </div>
               </div>
-              <button id="submit" type="submit" className="submit-btn">submit</button>
+              <div style={{textAlign: "center"}}>
+                <button id="submit" type="submit" className="submit-btn">submit</button>
+              </div>
             </form>
           </div>
         </div>

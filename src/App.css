@@ -5,7 +5,6 @@
 
 .wrapper {
   position: relative;
-  /* margin: auto; */
   background: url('./yolka.jpg') no-repeat;
   background-size: cover;
   width: 100%;
@@ -15,7 +14,6 @@
 
 div .head {
   overflow: auto;
-  /* margin: auto; */
   position: absolute;
   top: 2em;
   bottom: 0;
@@ -38,7 +36,7 @@ div .head {
   margin: 0;
   margin-bottom: 0.3em;
 }
-@media (min-width: 750px) {
+@media (min-width: 450px) {
   div .head {
     width: 50%;
     top: 3em;
@@ -53,7 +51,9 @@ div .head {
     font-size: 1.8em;
   }
 }
-
+.message {
+  margin: 1em 2em 0;
+}
 .flexbox {
   display: flex;
   flex-direction: column;
@@ -62,55 +62,88 @@ div .head {
   color: rgb(225, 225, 221);
 }
 .form-container {
+  font-family: Comfortaa;
   margin: auto;
-  flex-basis: 240px;
+  margin: 2em;
+}
+@media (min-width: 450px) {
+  .form-container {
+    margin: 2em auto;
+  }
 }
 input {
-  font-size: 1em;
-  margin: 1em 0;
-  padding: 5px 0;
-  /* border: none; */
+  font-size: 14px;
+  margin: 0.5em 0 1em;
+  padding: 5px 10px;
+  width: 100%;
+  min-width: 18em;
+  box-sizing: border-box;
   background: transparent;
-  border: 1px solid white;
-  color: white;
-  border-radius: 3px;
+  border: 1px solid rgb(225, 225, 221);
+  color: rgb(225, 225, 221);
+  border-radius: 0px;
 }
 input {
-  -webkit-border-radius: 3px;
+  -webkit-border-radius: 0px;
   -webkit-appearance: none;
 }
 input:focus {
-  /* border-bottom: 1px solid white; */
   outline: none;
   box-shadow: none;
 }
 input::placeholder {
-  color: white;
+  color: rgb(121, 121, 121);
+}
+
+select {
+  margin-top: 0.5em;
+  width: 6em; 
+  font-size: 14px;
+  padding: 3px;
+  color: rgb(225, 225, 221);
+  border: 1px solid rgb(225, 225, 221);
+  background-color: transparent;
+}
+select:focus {
+  outline: none;
+  box-shadow: none;
+}
+.peeps {
+  text-align: center;
+  display: flex;
+  flex-flow: nowrap;
+  justify-content: space-between;
 }
 
 .submit-btn {
-  margin-top: 10px;
+  font-family: Comfortaa;
+  margin-top: 1.5em;
   font-size: 16px;
-  padding: 0 0 2px 0;
+  padding: 0.6em 1em;
   border: none;
   background-color: transparent;
-  border-bottom: 1px solid white;
+  border: 1px solid rgb(225, 225, 221);
   color: rgb(225, 225, 221);
 }
-.submit-btn:active {
+.submit-btn:active, .submit-btn:hover {
+  cursor: pointer;
   color: purple;
   border: none;
   outline: none;
-  border-bottom: 1px solid purple;
+  border: 1px solid purple;
 }
 .submit-btn:focus{
   color: purple;
   border: none;
   outline: none;
   box-shadow: none;
-  border-bottom: 1px solid purple;
+  border: 1px solid purple;
 }
-
+@media (min-width: 450px){
+  .submit-btn {
+    padding: 0.6em;
+  }
+}
 footer {
   padding: 0 1em;
   background-color: black;
@@ -118,7 +151,7 @@ footer {
 }
 .policy {
   margin: 0;
-  padding: 2em 0;
+  padding: 1.5em 0;
   text-align: center;
   font-size: 14px;
 }
@@ -133,26 +166,18 @@ footer {
   border-top: 1px solid white;
   display: flex;
   justify-content: space-between;
-  font-size: 0.8em;
-  color: rgb(225, 225, 221);
+  font-size: 14px;
+  color: rgb(121, 121, 121);
   cursor: default;
 }
 .signature {
   cursor: pointer;
   text-decoration: none;
 
-  color: rgb(225, 225, 221);
+  color: rgb(121, 121, 121);
 }
 .signature:active, .signature:hover {
   color: purple;
-}
-
-
-.peeps {
-  margin-top: 10px;
-  display: flex;
-  flex-flow: nowrap;
-  justify-content: center;
 }
 
 
