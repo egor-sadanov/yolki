@@ -1,0 +1,184 @@
+a {
+  text-decoration: none;
+}
+
+form > input {
+  margin-top: 10px;
+}
+
+input {
+  font-size: 16px;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid white;
+  color: white;
+}
+input {
+  -webkit-border-radius: 0;
+  -webkit-appearance: none;
+}
+input:focus {
+  border-bottom: 1px solid white;
+  outline: none;
+  box-shadow: none;
+}
+input::placeholder {
+  color: white;
+}
+
+@font-face {
+	font-family: Comfortaa;
+	src: url("./Comfortaa-Regular.ttf") format("ttf");
+}
+
+.wrapper {
+  position: relative;
+  /* margin: auto; */
+  background: url('./yolka.jpg') no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 0;
+  padding-top: 149.85%;
+}
+
+div .head {
+  overflow: auto;
+  /* margin: auto; */
+  position: absolute;
+  top: 2em;
+  bottom: 0;
+  right: 0;
+  left: 2em;
+}
+.head {
+  font-family: Comfortaa;
+  color: rgb(225, 225, 221);
+}
+.yolki-head {
+  font-size: 4em;
+  margin: 0;
+}
+.inner-head {
+  margin-left: 0.2em;
+  font-size: 1.2em;
+}
+.inner-head > p {
+  margin: 0;
+  margin-bottom: 0.3em;
+}
+@media (min-width: 750px) {
+  div .head {
+    width: 50%;
+    top: 3em;
+    margin: auto;
+    text-align: center;
+  }
+  .yolki-head {
+    font-size: 6em;
+  }
+  .inner-head {
+    margin-left: 0;
+    font-size: 1.8em;
+  }
+}
+
+.submit-btn {
+  margin-top: 10px;
+  font-size: 16px;
+  padding: 0 0 2px 0;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid white;
+  color: rgb(225, 225, 221);
+}
+.submit-btn:active {
+  color: purple;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid purple;
+}
+.submit-btn:focus{
+  color: purple;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  border-bottom: 1px solid purple;
+}
+
+footer {
+  padding: 0 1em;
+  background-color: black;
+  color: rgb(225, 225, 221);
+}
+.policy {
+  margin: 0;
+  padding: 2em 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+.code-link {
+  color: rgb(225, 225, 221);
+  text-decoration: underline;
+}
+
+.code-link:active, .code-link:hover {
+  color: purple;
+}
+
+.reference {
+  border-top: 1px solid white;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8em;
+  color: rgb(225, 225, 221);
+  cursor: default;
+}
+.signature {
+  cursor: pointer;
+  color: rgb(225, 225, 221);
+}
+.signature:active, .signature:hover {
+  color: purple;
+}
+
+
+.peeps {
+  margin-top: 10px;
+  display: flex;
+  flex-flow: nowrap;
+  justify-content: center;
+}
+
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .app-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.app-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.app-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
