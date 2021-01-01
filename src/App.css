@@ -1,31 +1,3 @@
-a {
-  text-decoration: none;
-}
-
-form > input {
-  margin-top: 10px;
-}
-
-input {
-  font-size: 16px;
-  border: none;
-  background: transparent;
-  border-bottom: 1px solid white;
-  color: white;
-}
-input {
-  -webkit-border-radius: 0;
-  -webkit-appearance: none;
-}
-input:focus {
-  border-bottom: 1px solid white;
-  outline: none;
-  box-shadow: none;
-}
-input::placeholder {
-  color: white;
-}
-
 @font-face {
 	font-family: Comfortaa;
 	src: url("./Comfortaa-Regular.ttf") format("ttf");
@@ -82,6 +54,40 @@ div .head {
   }
 }
 
+.flexbox {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  background-color: black;
+  color: rgb(225, 225, 221);
+}
+.form-container {
+  margin: auto;
+  flex-basis: 240px;
+}
+input {
+  font-size: 1em;
+  margin: 1em 0;
+  padding: 5px 0;
+  /* border: none; */
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  border-radius: 3px;
+}
+input {
+  -webkit-border-radius: 3px;
+  -webkit-appearance: none;
+}
+input:focus {
+  /* border-bottom: 1px solid white; */
+  outline: none;
+  box-shadow: none;
+}
+input::placeholder {
+  color: white;
+}
+
 .submit-btn {
   margin-top: 10px;
   font-size: 16px;
@@ -116,12 +122,9 @@ footer {
   text-align: center;
   font-size: 14px;
 }
-
 .code-link {
   color: rgb(225, 225, 221);
-  text-decoration: underline;
 }
-
 .code-link:active, .code-link:hover {
   color: purple;
 }
@@ -136,6 +139,8 @@ footer {
 }
 .signature {
   cursor: pointer;
+  text-decoration: none;
+
   color: rgb(225, 225, 221);
 }
 .signature:active, .signature:hover {

@@ -59,67 +59,68 @@ function App() {
             <p className="yolki-head">Yölki</p>
             <div className="inner-head">
               <p>Russian House</p>
-              <p>Jan 9th</p>
+              <p>January 9</p>
               <p>12:00pm</p>
             </div>
           </div>
         </div>
-
-        <form onSubmit={e => handleSubmit(e)}>
-          <input type="hidden" name="form-name" value="contact" />
-          <p hidden>
-            <label>
-              Don’t fill this out:{" "}
-              <input name="bot-field" onChange={handleChange} />
-            </label>
-          </p>
-          <div>
-            <label htmlFor="name">Name{star}</label><br />
-            <input 
-              type="text" 
-              name="name" 
-              value={formData.name} 
-              onChange={handleChange} 
-              placeholder="name"
-              required 
-            />
+        <div className="flexbox">
+          <div className="form-container">
+            <form onSubmit={e => handleSubmit(e)}>
+              <input type="hidden" name="form-name" value="contact" />
+              <p hidden>
+                <label>
+                  Don’t fill this out:{" "}
+                  <input name="bot-field" onChange={handleChange} />
+                </label>
+              </p>
+              <div>
+                <label htmlFor="name">Name{star}</label><br />
+                <input 
+                  type="text" 
+                  name="name" 
+                  value={formData.name} 
+                  onChange={handleChange} 
+                  placeholder="name"
+                  required 
+                />
+              </div>
+              <div>
+                <label htmlFor="email">Email{star}</label><br />
+                <input 
+                  type="email" 
+                  name="email" 
+                  value={formData.email} 
+                  onChange={handleChange} 
+                  placeholder="email"
+                  required
+                />
+              </div>
+              <div>
+                <label htmlFor="phone">Phone{star}</label><br />
+                <input 
+                  type="text" 
+                  name="phone" 
+                  value={formData.phone} 
+                  onChange={handleChange} 
+                  placeholder="phone"
+                />
+              </div>
+              <div className="peeps">
+                <label htmlFor="adults">Adults</label><br />
+                <select name="adults" id="adults" onChange={handleChange}>
+                  {[...Array(11)].map((x, i) => <option key={i}>{i}</option>)}
+                </select>
+                <label htmlFor="kids">Kids</label><br />
+                <select name="kids" id="kids" onChange={handleChange}>
+                  {[...Array(11)].map((x, i) => <option key={i}>{i}</option>)}
+                </select>
+              </div>
+              <button id="submit" type="submit" className="submit-btn">submit</button>
+            </form>
           </div>
-          <div>
-            <label htmlFor="email">Email{star}</label><br />
-            <input 
-              type="email" 
-              name="email" 
-              value={formData.email} 
-              onChange={handleChange} 
-              placeholder="email"
-              required
-            />
-          </div>
-          <div>
-            <label htmlFor="phone">Phone{star}</label><br />
-            <input 
-              type="text" 
-              name="phone" 
-              value={formData.phone} 
-              onChange={handleChange} 
-              placeholder="phone"
-            />
-          </div>
-          <div className="peeps">
-            <label htmlFor="adults">Adults</label><br />
-            <select name="adults" id="adults" onChange={handleChange}>
-              {[...Array(11)].map((x, i) => <option key={i}>{i}</option>)}
-            </select>
-            <label htmlFor="kids">Kids</label><br />
-            <select name="kids" id="kids" onChange={handleChange}>
-              {[...Array(11)].map((x, i) => <option key={i}>{i}</option>)}
-            </select>
-          </div>
-          <button id="submit" type="submit" className="submit-btn">submit</button>
-        </form>
+        </div>
       </main>
-
-
 
       <footer>
         <div className="policy">
