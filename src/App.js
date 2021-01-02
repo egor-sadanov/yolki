@@ -11,7 +11,8 @@ function App() {
 		email: "",
     phone: "",
     adults: 1,
-    kids: 1
+    kids: 1,
+    comment: ""
 	})
 
   function encode(data) {
@@ -110,7 +111,7 @@ function App() {
                   placeholder="enter your phone"
                 />
               </div>
-              <div className="peeps">
+              <div className="selection-box">
                 <div>
                   <label htmlFor="adults">Adults</label><br />
                   <select name="adults" id="adults" onChange={handleChange}>
@@ -124,6 +125,13 @@ function App() {
                   </select>
                 </div>
               </div>
+              <textarea 
+                type="text" 
+                name="comment" 
+                value={formData.comment} 
+                onChange={handleChange} 
+                placeholder="comments (optional)"
+              />
               <div style={{textAlign: "center"}}>
                 <button id="submit" type="submit" className="submit-btn">submit</button>
               </div>

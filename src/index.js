@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './Comfortaa-VariableFont_wght.ttf'
 
 import { positions, Provider } from "react-alert";
 import AlertMUITemplate from "react-alert-template-mui";
