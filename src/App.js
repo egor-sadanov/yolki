@@ -31,7 +31,7 @@ function App() {
     })
     .then( () => { 
       alert.show("We will send you all the details regarding payment within 1 day", {
-        title: "Thank you, it's been successful!",
+        title: "Thank you, the form has been successfully submitted!",
         onClose: () => {
           window.location.reload()
         }
@@ -67,8 +67,8 @@ function App() {
         </div>
         <div className="flexbox">
           <div className="message">
-            <p>Please be aware that due to current covid restrictions in place, we are limited by the number of partons. That said, we encourage you to purchase tickets in advance.</p>
-            <p style={{marginBottom: 0}}>In the form below you can leave inquiry and we will send you card details for transfer.</p>
+            <p>Please be aware that due to the current covid restrictions in place, we are limited by the number of partons for the event. That said, we encourage you to purchase tickets in advance.</p>
+            <p style={{marginBottom: 0}}>In the form below you can leave an inquiry and we will send you bank details for the transfer.</p>
           </div>
           <div className="form-container">
             <form onSubmit={e => handleSubmit(e)}>
