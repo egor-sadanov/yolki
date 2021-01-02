@@ -84,6 +84,7 @@ function App() {
                 <input 
                   type="text" 
                   name="name" 
+                  id="name" 
                   value={formData.name} 
                   onChange={handleChange} 
                   placeholder="enter your name"
@@ -94,7 +95,8 @@ function App() {
                 <label htmlFor="email">Email{star}</label><br />
                 <input 
                   type="email" 
-                  name="email" 
+                  name="email"
+                  id="email" 
                   value={formData.email} 
                   onChange={handleChange} 
                   placeholder="enter your email"
@@ -106,6 +108,7 @@ function App() {
                 <input 
                   type="text" 
                   name="phone" 
+                  id="phone" 
                   value={formData.phone} 
                   onChange={handleChange} 
                   placeholder="enter your phone"
@@ -126,8 +129,8 @@ function App() {
                 </div>
               </div>
               <textarea 
-                type="text" 
                 name="comment" 
+                rows="4"
                 value={formData.comment} 
                 onChange={handleChange} 
                 placeholder="comments (optional)"
